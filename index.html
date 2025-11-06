@@ -29,7 +29,7 @@
 
     /* Header */
     header {
-      background: linear-gradient(135deg, var(--primary), #0e4970);
+      background: linear-gradient(135deg, var(--primary), #114161);
       color: #fff;
       text-align: center;
       padding: 4rem 1rem 3rem;
@@ -76,13 +76,13 @@
       border-radius: 2px;
     }
 
-    /* Services Grid */
-    .services {
+    /* Services & Projects Grid */
+    .services, .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.8rem;
     }
-    .service-card {
+    .service-card, .project-card {
       background: #fff;
       border-radius: var(--radius);
       padding: 1.8rem;
@@ -91,11 +91,11 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 1px solid #eee;
     }
-    .service-card:hover {
+    .service-card:hover, .project-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 16px 32px rgba(0,0,0,0.12);
     }
-    .service-icon {
+    .service-icon, .project-icon {
       width: 64px; height: 64px;
       background: var(--primary-light);
       border-radius: 50%;
@@ -104,12 +104,12 @@
       font-size: 1.8rem;
       color: var(--primary);
     }
-    .service-card h3 {
+    .service-card h3, .project-card h3 {
       font-size: 1.35rem;
       margin: 0.8rem 0 0.5rem;
       color: var(--dark);
     }
-    .service-card p {
+    .service-card p, .project-card p {
       font-size: 0.95rem;
       color: var(--gray);
       margin-bottom: 1rem;
@@ -122,6 +122,15 @@
       gap: 0.4rem;
       margin-top: 0.8rem;
     }
+    .project-link {
+      display: inline-block;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .project-link:hover { text-decoration: underline; }
 
     /* Contact */
     .contact {
@@ -136,6 +145,7 @@
     .contact a { color: var(--primary); text-decoration: none; font-weight: 600; }
     .btn {
       display: inline-block;
+      /* background: var(--primary); */
       color: white;
       padding: 0.9rem 2rem;
       border-radius: 50px;
@@ -143,8 +153,9 @@
       text-decoration: none;
       margin-top: 1.2rem;
       box-shadow: 0 4px 12px rgba(0,102,204,0.3);
+      transition: all 0.3s ease;
     }
-
+    /* .btn:hover { background: #0055aa; transform: translateY(-2px); } */
 
     /* Footer */
     footer {
@@ -161,6 +172,9 @@
       h1 { font-size: 2rem; }
       .avatar { width: 100px; height: 100px; }
       header { padding: 3rem 1rem 2.5rem; }
+      footer {
+        margin-top: 0;
+      }
     }
   </style>
 </head>
@@ -215,6 +229,41 @@
           <p>Build physical products with sensors: smart locks, trackers, automation systems.</p>
           <div class="benefit"><i class="fas fa-check"></i> Control devices remotely</div>
           <div class="benefit"><i class="fas fa-check"></i> Collect real-time data</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Recent Projects -->
+    <section class="section">
+      <h2>Recent Projects</h2>
+      <div class="projects">
+
+        <!-- Hirepanda -->
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-users"></i></div>
+          <h3>Hirepanda</h3>
+          <p>AI-driven hiring platform that automates candidate sourcing, skill assessments, and ranking—cutting hiring time by 80% for 10K+ companies.</p>
+          <div class="benefit"><i class="fas fa-check"></i> Faster, smarter recruitment</div>
+          <a href="https://www.hirepanda.com/" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <!-- Gro.co.in -->
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-calculator"></i></div>
+          <h3>Gro.co.in</h3>
+          <p>Professional website for GRO Associates, a Mangaluru-based accounts firm offering taxation, compliance, and business advisory services.</p>
+          <div class="benefit"><i class="fas fa-check"></i> Streamlined client onboarding</div>
+          <a href="https://gro.co.in/" target="_blank" class="project-link">View Project</a>
+        </div>
+
+        <!-- Findola -->
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Findola App</h3>
+          <p>Fintech mobile app for all-in-one mutual fund investments and SIPs—making it easy for users to invest, track, and grow their savings on Android.</p>
+          <div class="benefit"><i class="fas fa-check"></i> Simple, secure investing</div>
+          <a href="https://play.google.com/store/apps/details?id=com.findolacapital.findola&pcampaignid=web_share" target="_blank" class="project-link">View on Google Play</a>
         </div>
 
       </div>
