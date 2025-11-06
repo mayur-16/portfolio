@@ -3,73 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mayur – Freelance Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Mayur – Freelance Developer | Web • Mobile • AI • Embedded</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
-    :root { --primary: #0066cc; --dark: #222; --light: #f9f9fb; }
+    :root {
+      --primary: #0066cc;
+      --primary-light: #e6f0ff;
+      --dark: #1a1a1a;
+      --gray: #555;
+      --light: #f8f9fa;
+      --success: #28a745;
+      --radius: 16px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
-    .container { max-width: 900px; margin: auto; padding: 2rem; }
-    header { text-align:center; padding:3rem 0; background:linear-gradient(135deg, #0066cc, #00aaff); color:#fff; border-radius:0 0 20px 20px; }
-    .avatar { width:120px; height:120px; border-radius:50%; border:5px solid #fff; margin-bottom:1rem; }
-    h1 { font-size:2.2rem; margin:0.5rem 0; }
-    .tagline { font-weight:600; opacity:0.9; }
-    .section { margin:3rem 0; }
-    .services { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:1.5rem; }
-    .card { background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); text-align:center; }
-    .card svg { width:40px; height:40px; fill:var(--primary); margin-bottom:0.8rem; }
-    .btn { display:inline-block; background:var(--primary); color:#fff; padding:0.8rem 1.8rem; border-radius:8px; text-decoration:none; font-weight:600; margin-top:1rem; }
-    .contact { background:#fff; padding:2rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); text-align:center; }
-    footer { text-align:center; padding:2rem; color:#666; font-size:0.9rem; }
-    @media (max-width:600px) { h1 { font-size:1.8rem; } .avatar { width:100px; height:100px; } }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--dark);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    .container { max-width: 1000px; margin: auto; padding: 0 1.5rem; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary), #0099ff);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -30px; left: 0; right: 0;
+      height: 60px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .avatar {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: 2.5rem; font-weight: 700; margin: 0.5rem 0; }
+    .tagline { font-weight: 600; opacity: 0.95; }
+    .subtitle { font-size: 1.1rem; margin-top: 0.5rem; opacity: 0.9; }
+
+    /* Section */
+    .section { padding: 3.5rem 0; }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      color: var(--dark);
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 60px; height: 4px;
+      background: var(--primary);
+      display: block;
+      margin: 0.8rem auto;
+      border-radius: 2px;
+    }
+
+    /* Services Grid */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #eee;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+    }
+    .service-icon {
+      width: 64px; height: 64px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+      font-size: 1.8rem;
+      color: var(--primary);
+    }
+    .service-card h3 {
+      font-size: 1.35rem;
+      margin: 0.8rem 0 0.5rem;
+      color: var(--dark);
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+    .benefit {
+      font-size: 0.85rem;
+      color: var(--success);
+      font-weight: 600;
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.4rem;
+      margin-top: 0.8rem;
+    }
+
+    /* Contact */
+    .contact {
+      background: var(--primary-light);
+      padding: 2.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .contact h2 { margin-bottom: 1.5rem; }
+    .contact p { margin: 0.8rem 0; font-size: 1.05rem; }
+    .contact a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,102,204,0.3);
+      transition: all 0.3s ease;
+    }
+    .btn:hover { background: #0055aa; transform: translateY(-2px); }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .avatar { width: 100px; height: 100px; }
+      header { padding: 3rem 1rem 2.5rem; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <img src="avatar.jpg" alt="Mayur" class="avatar">
     <h1>Mayur</h1>
     <p class="tagline">Freelance Software Developer</p>
-    <p>Web • Mobile • AI • Embedded Systems</p>
+    <p class="subtitle">I build digital solutions that grow your business</p>
   </header>
 
   <div class="container">
-    <div class="section">
-      <h2>Services</h2>
-      <div class="services">
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
-          <h3>Web Apps</h3>
-          <p>React, Node, Full-Stack</p>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM5 17h14V7H5v10z"/></svg>
-          <h3>Mobile Apps</h3>
-          <p>Flutter, iOS/Android</p>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-6h2v6zm0-8h-2V7h2v4z"/></svg>
-          <h3>AI </h3>
-          <p>Python, LLMs</p>
-        </div>
-        <div class="card">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h18M3 15h18M9 9v6M15 9v6"/></svg>
-          <h3>Embedded</h3>
-          <p>Arduino, ESP32, RTOS</p>
-        </div>
-      </div>
-    </div>
 
-    <div class="section contact">
-      <h2>Let’s Work Together</h2>
-      <p><strong>Email:</strong> mayur.acharya.contact@gmail.com</p>
-      <p><strong>Phone:</strong> +91 7676498124</p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mayur-acharya-88a0a2183" style="color:var(--primary)">linkedin.com/in/mayur</a></p>
-      <a href="mayur.vcf" download class="btn">Download vCard</a>
-    </div>
+    <!-- Services -->
+    <section class="section">
+      <h2>My Services</h2>
+      <div class="services">
+
+        <!-- Web Apps -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-globe"></i></div>
+          <h3>Website Development</h3>
+          <p>Get a modern, fast, and mobile-friendly website that works 24/7 to attract customers.</p>
+          <div class="benefit"><i class="fas fa-check"></i> Reach customers online</div>
+          <div class="benefit"><i class="fas fa-check"></i> Sell products or book appointments</div>
+        </div>
+
+        <!-- Mobile Apps -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Mobile Apps</h3>
+          <p>Custom Android & iOS apps so your customers can use your service on their phones.</p>
+          <div class="benefit"><i class="fas fa-check"></i> Stay connected with users</div>
+          <div class="benefit"><i class="fas fa-check"></i> Send push notifications</div>
+        </div>
+
+        <!-- AI & Automation -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3>AI & Automation</h3>
+          <p>Let AI handle repetitive tasks: chatbots, data entry, predictions, and smart reports.</p>
+          <div class="benefit"><i class="fas fa-check"></i> Save 10+ hours/week</div>
+          <div class="benefit"><i class="fas fa-check"></i> Reduce human errors</div>
+        </div>
+
+        <!-- Embedded Systems -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-microchip"></i></div>
+          <h3>Smart Devices (IoT)</h3>
+          <p>Build physical products with sensors: smart locks, trackers, automation systems.</p>
+          <div class="benefit"><i class="fas fa-check"></i> Control devices remotely</div>
+          <div class="benefit"><i class="fas fa-check"></i> Collect real-time data</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section">
+      <div class="contact">
+        <h2>Let’s Work Together</h2>
+        <p><strong>Email:</strong> <a href="mailto:mayur.acharya.contact@gmail.com">mayur.acharya.contact@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+917676498124">+91 7676498124</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mayur-acharya-88a0a2183" target="_blank">linkedin.com/in/mayur</a></p>
+        <a href="mayur.vcf" download class="btn">
+          <i class="fas fa-address-card"></i> Download Contact
+        </a>
+      </div>
+    </section>
+
   </div>
 
   <footer>
     © 2025 Mayur Dev Services
   </footer>
+
 </body>
 </html>
