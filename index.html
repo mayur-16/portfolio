@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mayur – Freelance Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0066cc; --dark: #222; --light: #f9f9fb; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); line-height:1.6; }
+    .container { max-width: 900px; margin: auto; padding: 2rem; }
+    header { text-align:center; padding:3rem 0; background:linear-gradient(135deg, #0066cc, #00aaff); color:#fff; border-radius:0 0 20px 20px; }
+    .avatar { width:120px; height:120px; border-radius:50%; border:5px solid #fff; margin-bottom:1rem; }
+    h1 { font-size:2.2rem; margin:0.5rem 0; }
+    .tagline { font-weight:600; opacity:0.9; }
+    .section { margin:3rem 0; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:1.5rem; }
+    .card { background:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); text-align:center; }
+    .card svg { width:40px; height:40px; fill:var(--primary); margin-bottom:0.8rem; }
+    .btn { display:inline-block; background:var(--primary); color:#fff; padding:0.8rem 1.8rem; border-radius:8px; text-decoration:none; font-weight:600; margin-top:1rem; }
+    .contact { background:#fff; padding:2rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.08); text-align:center; }
+    footer { text-align:center; padding:2rem; color:#666; font-size:0.9rem; }
+    @media (max-width:600px) { h1 { font-size:1.8rem; } .avatar { width:100px; height:100px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="avatar.jpg" alt="Mayur" class="avatar">
+    <h1>Mayur</h1>
+    <p class="tagline">Freelance Software Developer</p>
+    <p>Web • Mobile • AI • Embedded Systems</p>
+  </header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Services</h2>
+      <div class="services">
+        <div class="card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          <h3>Web Apps</h3>
+          <p>React, Node, Full-Stack</p>
+        </div>
+        <div class="card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM5 17h14V7H5v10z"/></svg>
+          <h3>Mobile Apps</h3>
+          <p>Flutter, iOS/Android</p>
+        </div>
+        <div class="card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17h-2v-6h2v6zm0-8h-2V7h2v4z"/></svg>
+          <h3>AI </h3>
+          <p>Python, LLMs</p>
+        </div>
+        <div class="card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h18M3 15h18M9 9v6M15 9v6"/></svg>
+          <h3>Embedded</h3>
+          <p>Arduino, ESP32, RTOS</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section contact">
+      <h2>Let’s Work Together</h2>
+      <p><strong>Email:</strong> mayur.acharya.contact@gmail.com</p>
+      <p><strong>Phone:</strong> +91 7676498124</p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mayur-acharya-88a0a2183" style="color:var(--primary)">linkedin.com/in/mayur</a></p>
+      <a href="mayur.vcf" download class="btn">Download vCard</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Mayur Dev Services
+  </footer>
+</body>
+</html>
